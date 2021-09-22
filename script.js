@@ -34,21 +34,46 @@ function userQuestions() {
   }   
   return userChoice;
 }
- 
 
+// function that combines user choice's to generate new password.
+function generatePassword() {
+  var passwordOptions = userQuestions();
+  var passwordCombo = [];
+  var finalPassword = "";
 
+  if(passwordOptions.inputLowercase) {
+      for(var i of lowerCase)
+      passwordCombo.push(i);
+  }
+  if(passwordOptions.inputUppercase) {
+      for(var i of upperCase)
+      passwordCombo.push(i);
+  }
+  if(passwordOptions.inputNumeric) {
+      for(var i of numeric)
+      passwordCombo.push(i);
+  }
+  if(passwordOptions.inputCharacters) {
+      for(var i of characters)
+      passwordCombo.push(i);
+  }
+  
+  console.log(passwordCombo);
 
+  for (var i = 0; i < passwordOptions.length; i++) {
+      finalPassword += passwordCombo[Math.floor(Math.random() * passwordCombo.length)];
+  }
+  console.log(finalPassword);
+  return finalPassword;
+}
 
-
-
-// Write password to the #password input
+// Write password to the #password input.
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
-// Add event listener to generate button
+// Add event listener to generate button.
 generateBtn.addEventListener("click", writePassword);
