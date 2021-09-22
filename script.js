@@ -58,11 +58,13 @@ function generatePassword() {
       passwordCombo.push(i);
   }
   
+  // logs password array combinations.
   console.log(passwordCombo);
 
   for (var i = 0; i < passwordOptions.length; i++) {
       finalPassword += passwordCombo[Math.floor(Math.random() * passwordCombo.length)];
   }
+  // logs final password.
   console.log(finalPassword);
   return finalPassword;
 }
