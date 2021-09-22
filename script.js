@@ -15,7 +15,8 @@ function userQuestions() {
       alert("Invalid: Please enter a password length between 8 and 128 characters to continue:");
       return;
   }
-  // To contine, user will be prompted with questions as to whether they would like lowercase or uppercase letters, numbers or characters in their password. User must click 'ok' or 'cancel' to each of the following prompts in order to move forward.
+  // To continue, user will be prompted with questions as to whether they would like lowercase or uppercase letters, numbers or characters in their password. 
+  // User must click 'ok' or 'cancel' to each of the following prompts in order to move forward.
   var inputLowercase = confirm("Would you like your new password to contain lowercase letters?");
   var inputUppercase = confirm("Would you like your new password to contain uppercase letters?");
   var inputNumeric = confirm("Would you like your new password to contain numbers?");
@@ -35,7 +36,7 @@ function userQuestions() {
   return userChoice;
 }
 
-// function that combines user choice's to generate new password.
+// function that combines user's specified choice's to generate new password.
 function generatePassword() {
   var passwordOptions = userQuestions();
   var passwordCombo = [];
