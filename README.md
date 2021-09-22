@@ -57,7 +57,7 @@ When clicking on the generate password button, the user will be presented with a
 ![invalid input length](./assets/images/passwordleninvalid.png)
 
 
-* if user doclines all prompts, an alert will appear:
+* if user declines all prompts, an alert will appear:
 ![invalid criteria](./assets/images/invalidcriteria.png)
 
 
